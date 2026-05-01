@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NexusBrain Entry Schema",
+  "description": "Schema for a single category file. Keys are entry names, values are short strings or structured tips.",
+  "type": "object",
+  "additionalProperties": {
+    "oneOf": [
+      {
+        "type": "string",
+        "maxLength": 200,
+        "description": "Short description (preferred — minimal tokens)."
+      },
+      {
+        "type": "object",
+        "properties": {
+          "tip": { "type": "string", "maxLength": 200 },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" },
+            "maxItems": 5
+          }
+        },
+        "required": ["tip"],
+        "additionalProperties": false
+      }
+    ]
+  }
+}

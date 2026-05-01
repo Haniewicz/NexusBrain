@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NexusBrain Manifest Schema",
+  "type": "object",
+  "properties": {
+    "v": { "type": "integer" },
+    "categories": {
+      "type": "object",
+      "properties": {
+        "languages":    { "type": "array", "items": { "type": "string" } },
+        "frameworks":   { "type": "array", "items": { "type": "string" } },
+        "patterns":     { "type": "array", "items": { "type": "string" } },
+        "integrations": { "type": "array", "items": { "type": "string" } },
+        "pitfalls":     { "type": "array", "items": { "type": "string" } },
+        "architecture": { "type": "array", "items": { "type": "string" } },
+        "tests":        { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["languages", "frameworks", "patterns", "integrations", "pitfalls", "architecture", "tests"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["v", "categories"],
+  "additionalProperties": false
+}

@@ -43,7 +43,10 @@ def _get_brain_dir(config: dict) -> Path:
 
 
 def _get_local_path(config: dict) -> Path | None:
-    local = Path.cwd() / 'BRAIN' / 'ai_memory.local.json'
+    # Prefer project root derived from .nexusbrain location, fallback to cwd
+    config_path = Path.cwd() / '.nexusbrain'
+    project_root = config_path.parent if config_path.exists() else Path.cwd()
+    local = project_root / 'BRAIN' / 'ai_memory.local.json'
     return local if local.exists() else None
 
 
@@ -264,7 +267,9 @@ def _cli_add(brain_dir: Path, category: str, key: str, value: str, local: bool =
         sys.exit(1)
 
     if local:
-        local_path = Path.cwd() / 'BRAIN' / 'ai_memory.local.json'
+        config_path_root = Path.cwd() / '.nexusbrain'
+        project_root = config_path_root.parent if config_path_root.exists() else Path.cwd()
+        local_path = project_root / 'BRAIN' / 'ai_memory.local.json'
         if not local_path.exists():
             print(f'❌ Local brain not found at {local_path}')
             sys.exit(1)

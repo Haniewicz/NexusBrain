@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nexusbrain"
+version = "0.1.0"
+description = "Global AI knowledge base to improve performance and decrease token usage."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = ["PyYAML>=6.0"]
+
+[project.urls]
+Homepage = "https://github.com/Haniewicz/NexusBrain"
+Repository = "https://github.com/Haniewicz/NexusBrain"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nexusbrain*"]
+
+[tool.setuptools.package-data]
+nexusbrain = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

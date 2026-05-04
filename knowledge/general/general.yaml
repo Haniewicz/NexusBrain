@@ -1,0 +1,26 @@
+- id: general/critical-thinking
+  title: Critical Thinking Framework
+  category: general
+  description: A structured approach to evaluating claims and solving problems.
+  content: >
+    1. Identify the claim or problem clearly. 2. Gather evidence from reliable
+    sources. 3. Evaluate the quality and relevance of evidence. 4. Consider
+    alternative explanations or solutions. 5. Draw a conclusion proportional to
+    the evidence. 6. Remain open to revision when new evidence emerges.
+    Avoid common biases: confirmation bias, availability heuristic, anchoring.
+  tags: [thinking, reasoning, problem-solving, logic, bias]
+  examples:
+    - "Before accepting a statistic, ask: Who collected it? What was the sample size? Is there a conflict of interest?"
+
+- id: general/feynman-learning-technique
+  title: Feynman Learning Technique
+  category: general
+  description: A four-step method for deep understanding of any topic.
+  content: >
+    1. Choose a concept and study it. 2. Explain it in plain language as if
+    teaching a child. 3. Identify gaps — where the explanation breaks down,
+    return to source material. 4. Simplify analogies and re-explain. The goal
+    is to expose what you don't truly understand and fill those gaps.
+  tags: [learning, understanding, teaching, study, feynman]
+  examples:
+    - "If you can't explain recursion simply, you don't understand it well enough yet."

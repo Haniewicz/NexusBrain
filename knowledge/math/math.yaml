@@ -1,0 +1,27 @@
+- id: math/probability-basics
+  title: Probability Fundamentals
+  category: math
+  description: Core probability rules every practitioner should know.
+  content: >
+    P(A) ∈ [0, 1]. P(A ∪ B) = P(A) + P(B) − P(A ∩ B). P(A | B) = P(A ∩ B) /
+    P(B). Independent events: P(A ∩ B) = P(A) × P(B). Bayes' theorem:
+    P(A | B) = P(B | A) × P(A) / P(B). The expected value E[X] = Σ x·P(X=x).
+  tags: [math, probability, statistics, bayes, expected-value]
+  examples:
+    - "Fair coin: P(heads) = 0.5, P(two heads in a row) = 0.25"
+    - "Bayes' update: new belief = likelihood × prior / normaliser"
+
+- id: math/linear-algebra-essentials
+  title: Linear Algebra Essentials for AI
+  category: math
+  description: Key linear algebra concepts used in machine learning.
+  content: >
+    Vectors are ordered lists of numbers. Matrices represent linear
+    transformations. Matrix multiplication AB: rows of A dot columns of B.
+    Transpose: (Aᵀ)ᵢⱼ = Aⱼᵢ. Dot product measures similarity. Eigenvalues λ
+    satisfy Av = λv. PCA uses eigenvectors of the covariance matrix.
+    Neural network layers are matrix multiplications followed by non-linearities.
+  tags: [math, linear-algebra, vectors, matrices, machine-learning, ai]
+  examples:
+    - "Cosine similarity = (a · b) / (|a| |b|)"
+    - "Softmax: σ(z)ᵢ = exp(zᵢ) / Σ exp(zⱼ)"

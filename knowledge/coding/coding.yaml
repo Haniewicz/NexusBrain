@@ -1,0 +1,71 @@
+- id: coding/python-list-comprehension
+  title: Python List Comprehensions
+  category: coding
+  description: Concise syntax for building lists with optional filtering.
+  content: >
+    Use `[expr for item in iterable if condition]` instead of a for-loop with
+    `.append()`. List comprehensions are faster and more Pythonic. Avoid nesting
+    more than two levels deep — use a helper function instead.
+  tags: [python, list, comprehension, performance, readability]
+  examples:
+    - "squares = [x**2 for x in range(10)]"
+    - "evens = [x for x in range(20) if x % 2 == 0]"
+
+- id: coding/python-generators
+  title: Python Generators for Memory Efficiency
+  category: coding
+  description: Use generators when iterating over large datasets to avoid loading everything into memory.
+  content: >
+    Replace list comprehensions with generator expressions `(expr for item in
+    iterable)` when the result is only iterated once. Define generator functions
+    with `yield` instead of returning a list. This keeps memory usage constant
+    regardless of dataset size.
+  tags: [python, generator, yield, memory, performance]
+  examples:
+    - "total = sum(x**2 for x in range(1_000_000))"
+    - "def read_chunks(file, size=4096):\n    while chunk := file.read(size):\n        yield chunk"
+
+- id: coding/git-conventional-commits
+  title: Conventional Commits Format
+  category: coding
+  description: Standardised commit message format for automated changelogs and semantic versioning.
+  content: >
+    Format: `<type>(<scope>): <short description>`. Types: feat, fix, docs,
+    style, refactor, test, chore. Breaking changes: append `!` after type or
+    add `BREAKING CHANGE:` in footer. Enables automated semantic versioning and
+    changelog generation.
+  tags: [git, commits, versioning, changelog, conventions]
+  examples:
+    - "feat(auth): add OAuth2 login support"
+    - "fix(api)!: rename /users endpoint to /accounts"
+
+- id: coding/big-o-notation
+  title: Big-O Complexity Quick Reference
+  category: coding
+  description: Common algorithm complexities ranked from fastest to slowest.
+  content: >
+    O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ) < O(n!).
+    Hash table lookups are O(1). Binary search is O(log n). Sorting is typically
+    O(n log n). Avoid nested loops on large inputs (O(n²)). Use memoisation or
+    dynamic programming to reduce exponential complexity.
+  tags: [algorithms, complexity, big-o, performance, data-structures]
+  examples:
+    - "dict lookup: O(1)"
+    - "sorted(): O(n log n)"
+    - "checking all pairs: O(n²)"
+
+- id: coding/rest-api-best-practices
+  title: REST API Design Best Practices
+  category: coding
+  description: Guidelines for designing clean, consistent REST APIs.
+  content: >
+    Use nouns for resources (`/users`, not `/getUsers`). HTTP verbs define
+    actions: GET (read), POST (create), PUT/PATCH (update), DELETE (remove).
+    Return appropriate status codes: 200 OK, 201 Created, 400 Bad Request, 401
+    Unauthorized, 404 Not Found, 500 Internal Server Error. Version APIs via URL
+    (`/v1/`) or headers. Use pagination for list endpoints.
+  tags: [api, rest, http, design, backend]
+  examples:
+    - "GET /v1/users — list users"
+    - "POST /v1/users — create user"
+    - "PATCH /v1/users/{id} — partial update"

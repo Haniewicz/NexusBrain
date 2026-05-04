@@ -1,0 +1,28 @@
+- id: writing/clear-technical-writing
+  title: Clear Technical Writing Principles
+  category: writing
+  description: Core principles for writing clear, readable technical documentation.
+  content: >
+    Use active voice. Keep sentences short (≤20 words). One idea per paragraph.
+    Define acronyms on first use. Prefer simple words over jargon. Use numbered
+    lists for sequential steps and bullet lists for non-sequential items. Include
+    code examples for developer docs. Lead with the most important information.
+  tags: [writing, documentation, technical-writing, clarity, style]
+  examples:
+    - "Bad: 'The function should be called by the user.' Good: 'Call the function.'"
+    - "Use 'start' instead of 'initiate', 'use' instead of 'utilise'."
+
+- id: writing/prompt-engineering-basics
+  title: Prompt Engineering Basics
+  category: writing
+  description: Foundational techniques for writing effective AI prompts.
+  content: >
+    Be specific and unambiguous. Provide context and constraints. Specify the
+    desired output format. Use examples (few-shot) when the task is complex.
+    Break multi-step tasks into smaller sub-prompts. Ask the model to reason
+    step-by-step for complex problems. Avoid negations; state what you want,
+    not what you don't want.
+  tags: [prompts, ai, llm, prompt-engineering, instructions]
+  examples:
+    - "Bad: 'Write something about Python.' Good: 'Write a 3-bullet summary of Python list comprehensions for a beginner.'"
+    - "Add: 'Think step by step.' for reasoning tasks."

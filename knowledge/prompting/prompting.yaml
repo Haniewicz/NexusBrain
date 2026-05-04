@@ -1,0 +1,45 @@
+- id: prompting/chain-of-thought
+  title: Chain-of-Thought Prompting
+  category: prompting
+  description: Guide the AI to reason step-by-step before answering.
+  content: >
+    Append "Think step by step." or "Let's work through this carefully." to your
+    prompt. This dramatically improves accuracy on multi-step reasoning,
+    arithmetic, and logic tasks. For few-shot CoT, provide examples that include
+    the reasoning chain, not just the final answer. Works best with larger models.
+  tags: [prompting, chain-of-thought, reasoning, accuracy, llm]
+  examples:
+    - "Prompt: 'Solve: 17 × 24. Think step by step.' → model shows workings → 408."
+    - "Few-shot: show 2 examples with intermediate reasoning before the target question."
+
+- id: prompting/system-prompt-design
+  title: System Prompt Design Principles
+  category: prompting
+  description: How to write effective system prompts for AI assistants.
+  content: >
+    Set persona, context, and constraints at the top. Be explicit about what the
+    model should and should not do. Include output format instructions (e.g.
+    "Respond only in JSON"). Keep the system prompt focused — every sentence
+    costs tokens. Place the most critical instructions first and last (primacy
+    and recency effects). Use delimiters (```, ---, XML tags) to separate
+    sections.
+  tags: [prompting, system-prompt, instructions, llm, tokens]
+  examples:
+    - "You are a concise coding assistant. Respond only with code and brief inline comments. No prose."
+    - "Use <answer> tags to wrap your final answer."
+
+- id: prompting/reduce-token-usage
+  title: Strategies to Reduce Token Usage
+  category: prompting
+  description: Practical techniques to fit more work into fewer tokens.
+  content: >
+    1. Use bullet points instead of full sentences where possible. 2. Reference
+    knowledge by ID (e.g. "see prompting/chain-of-thought") rather than
+    repeating content. 3. Ask for concise answers explicitly: "Reply in ≤50
+    words." 4. Summarise long inputs before sending. 5. Cache and reuse
+    responses where the underlying data hasn't changed. 6. Use structured
+    output formats (JSON, YAML) which are denser than prose.
+  tags: [tokens, efficiency, prompting, cost, llm, optimisation]
+  examples:
+    - "Prefix prompt with: 'Be concise. Use lists. Skip preambles.'"
+    - "Summarise a long document first, then ask questions about the summary."
